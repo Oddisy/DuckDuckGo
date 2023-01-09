@@ -1,0 +1,294 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  /* width: 500px; */
+  /* height: 100vh; */
+  /* background-color: #f7f7f7; */
+  background-color: #f7f7f7;
+}
+.soc {
+  float: right;
+  margin-right: 110px;
+  margin-top: 30px;
+}
+
+.menu {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  float: right;
+  opacity: 0.4;
+  margin-left: 20px;
+}
+
+ul {
+  position: fixed;
+  display: none;
+  line-height: 35px;
+  list-style-type: none;
+  width: 130px;
+  height: 170px;
+  background-color: #ffffff;
+  border: 0px;
+  border-radius: 7px;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  padding: 15px 0px 15px 12px;
+}
+
+ul li {
+  margin-right: 10px;
+}
+
+.twmg {
+  position: relative;
+  top: 4px;
+  margin-right: 7px;
+}
+
+.soc:hover ul {
+  display: block;
+  list-style-type: none;
+}
+
+.main {
+  position: absolute;
+  top: 10%;
+  left: 25%;
+  height: 600px;
+}
+.main > img {
+  margin-top: 40px;
+  margin-left: 310px;
+}
+.main > h2 {
+  font-weight: 100;
+  text-indent: 260px;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+}
+
+.main > h3 {
+  font-size: 2.4rem;
+  margin-bottom: 16px;
+  text-indent: 3px;
+}
+
+.main > h3 + h4 {
+  font-size: 1.3rem;
+  text-indent: 35px;
+  margin-bottom: 9px;
+  font-weight: 100;
+}
+
+.main > p {
+  font-weight: 300;
+}
+
+.main > input {
+  width: 45rem;
+  padding: 12px;
+  font-size: 20px;
+  box-shadow: -1px 1px 5px -1px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: -1px 1px 5px -1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px 1px 5px -1px rgba(0, 0, 0, 0.75);
+  border: none;
+
+  margin-bottom: 35px;
+}
+.checky {
+  margin-left: 100px;
+}
+.checky span {
+  margin: 10px;
+  font-size: 20px;
+}
+
+input[type="checkbox"] {
+  accent-color: #678fff;
+  margin-bottom: 40px;
+  margin-right: 5px;
+}
+.main + .con {
+  background-size: cover;
+  /* height: 57rem; */
+  height: 0px;
+  width: 94rem;
+  position: absolute;
+  /* top: 98%; */
+  top: 60%;
+
+  /* margin-bottom: 30px; */
+}
+.personal-root {
+  border-radius: 500px 500px 0 0/25px 25px 0 0;
+  background-color: #e37151;
+  padding-top: 280px;
+}
+
+.flex {
+  display: flex;
+  padding-left: 12.5rem;
+  position: relative;
+  top: 270px;
+}
+.flex > div {
+  height: 21rem;
+  width: 22rem;
+  border-radius: 12px;
+  background-color: #ffffff;
+  margin-top: 0px;
+  margin: 12px 12px 4px 12px;
+  padding: 10px 5px;
+  line-height: 20px;
+}
+
+.duck a {
+  background-color: #678fff;
+  padding: 10px;
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+  margin-left: 230px;
+  border-radius: 10px;
+}
+
+.duck + h6 {
+  margin-left: 248px;
+  margin-top: 30px;
+  font-size: 14px;
+  font-weight: lighter;
+  margin-bottom: 50px;
+}
+.duck ~ p {
+  margin-left: 234px;
+  font-size: 19px;
+  font-weight: 400;
+}
+
+.flex h2 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.flex img {
+  margin-left: 110px;
+  margin-bottom: 30px;
+}
+
+.flex h4 {
+  font-weight: lighter;
+
+  padding-left: 30px;
+}
+.flex h4 a {
+  font-size: 17px;
+  color: #0754f8;
+  text-decoration: none;
+}
+.personal {
+  transform: translate(30rem, 0px);
+}
+.personal > h2 {
+  font-size: 40px;
+  color: white;
+  margin-bottom: 25px;
+}
+.personal > h4 {
+  font-size: 20px;
+  color: white;
+  font-weight: 100;
+  margin-left: 68px;
+  margin-bottom: 45px;
+}
+
+.btn-two a {
+  background-color: rgb(113, 56, 40);
+  padding: 10px;
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+  margin-top: 50px;
+
+  margin-left: 97px;
+  margin-bottom: 50px;
+  border-radius: 10px;
+}
+.duc {
+  object-fit: fill;
+  margin-left: 320px;
+  position: relative;
+  top: 4px;
+}
+
+.con > h2:last-of-type {
+  text-align: center;
+  margin-top: 89px;
+  font-size: 35px;
+  margin-bottom: 60px;
+}
+
+.con > h2 + .last h3 {
+  margin-left: 330px;
+  font-size: 20px;
+  font-weight: 300;
+  padding: 15px;
+  align-items: center;
+}
+
+.con > h2 + .last hr {
+  margin-left: 350px;
+  opacity: 0.4;
+  border: 0.1 solid rgb(122, 122, 122);
+  width: 590px;
+}
+
+.money {
+  display: none;
+  margin-left: 330px;
+  font-size: 15px;
+}
+.mon:hover .money {
+  display: block;
+  padding: 0px 25px 25px;
+}
+
+.mon:hover .money a {
+  text-decoration: none;
+  color: #678fff;
+}
+/* .mon:hover .mon > .hk:first-child::before:not(.hk) {
+      display: block;
+      padding: 0px 25px 25px;
+    } */
+/* .mon > h3:first-child::before {
+      content: attr();
+      margin-right: 5px;
+    } */
+
+hr:last-of-type {
+  margin-bottom: 50px;
+}
+
+h5:last-of-type {
+  margin-left: 300px;
+}
+.ico {
+  margin-right: 15px;
+  /* margin-top: 5px; */
+  margin-bottom: 0px;
+}
+.down {
+  opacity: 0.4;
+}
+
+.fa {
+  position: relative;
+  top: 4px;
+  right: 50px;
+  opacity: 0.4;
+}
