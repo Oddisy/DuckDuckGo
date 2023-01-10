@@ -4,25 +4,32 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
- <link rel="stylesheet" href="duck.css">
+    <title>DuckDuckGO Clone</title>
+     <link rel="stylesheet" href="duck.css">
   <link rel="stylesheet" href=
   "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css">
   </link>
+    <script>
+function myFunction() {
+   document.getElementById("demo").style.display = "block";
+}
+</script>
+
+  </head>
+
   <body>
     <img class="menu" src="assets/duckduckmenu-removebg-preview.png" alt="menu bar" height="50px"
       width="60px">
-    <div class="soc">
-      
+    <div  class="soc">
+      <button type="button" class="btn-head" onclick="myFunction()">
       <img class="down" src="assets/duckduckspeaker-removebg-preview.png " alt="speaker"  height="30px"
       width="30px">
       
-      <img  src="assets/duckduckdropdownn-removebg-preview.png " alt="dropdown"  height="20px"
-      width="20px">
+     <img  src="assets/duckduckdropdownn-removebg-preview.png " alt="dropdown"  height="20px"
+      width="20px"></button> 
       
-      <ul>
-        <li>
+      <ul id="demo">
+        <li><a href="">
           <img
             class="twmg"
             src="assets/duckducktwitter-removebg-preview.png"
@@ -31,8 +38,9 @@
             width="20px"
           />
           Twitter
+          </a>
         </li>
-        <li>
+        <li><a href="">
           <img
           class="twmg"
             src="assets/duckduck-redditttt.png"
@@ -40,17 +48,18 @@
             height="20px"
             width="20px"
           />
-          Reddit
+          Reddit</a>
         </li>
-        <li>
+        <li><a href="">
           <img
           class="twmg"
           src="assets/duckduck-redditttt.png"
           alt="reddit"
           height="20px"
           width="20px"
-        />Blog</li>
-        <li>
+        />Blog
+      </a></li>
+        <li><a href="">
           <img
           class="twmg"
             src="assets/duckduck-redditttt.png"
@@ -58,7 +67,7 @@
             height="20px"
             width="20px"
           />
-          Newsletter</li>
+          Newsletter</a></li>
       </ul>
     </div>
     <div class="main">
