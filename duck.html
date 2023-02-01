@@ -9,17 +9,47 @@
   <link rel="stylesheet" href=
   "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css">
   </link>
-    <script>
-function myFunction() {
-   document.getElementById("demo").style.display = "block";
-}
-</script>
-
   </head>
 
   <body>
-    <img class="menu" src="assets/duckduckmenu-removebg-preview.png" alt="menu bar" height="50px"
-      width="60px">
+
+    <ul id="menuContainer" class="menu-container">
+        <button class="return" onclick="menuSlideBack()"> 
+          <i class="fa fa-close"></i></button>
+      <ul class="menu-container-child">
+        <li><a href="">Settings</a></li>
+        <li><a href="">Themes</a></li>
+        <li><a href="">All Settings</a></li>
+        <li><a href="">!Bang Search Shortcuts</a></li>
+      </ul>
+      <ul class="menu-container-child">
+        <li><a href="">PRIVACY ESSENTIALS</a></li>
+        <li><a href="">Themes</a></li>
+        <li><a href="">All Settings</a></li>
+        <li><a href="">!Bang Search Shortcuts</a></li>
+      </ul>
+      <ul class="menu-container-child">
+       <li><a href="">Settings</a></li>
+        <li><a href="">Themes</a></li>
+        <li><a href="">All Settings</a></li>
+        <li><a href="">!Bang Search Shortcuts</a></li>
+      </ul>
+      <ul class="menu-container-child">
+        <li><a href="">Settings</a></li>
+        <li><a href="">Themes</a></li>
+        <li><a href="">All Settings</a></li>
+        <li><a href="">!Bang Search Shortcuts</a></li>
+      </ul>
+    </ul>
+
+    
+
+
+    <button onclick="menu()"><img class="menu" src="assets/duckduckmenu-removebg-preview.png" 
+    alt="menu bar" height="45px"
+      width="45px"></button>
+    
+    
     <div  class="soc">
       <button type="button" class="btn-head" onclick="myFunction()">
       <img class="down" src="assets/duckduckspeaker-removebg-preview.png " alt="speaker"  height="30px"
@@ -28,7 +58,7 @@ function myFunction() {
      <img  src="assets/duckduckdropdownn-removebg-preview.png " alt="dropdown"  height="20px"
       width="20px"></button> 
       
-      <ul id="demo">
+      <ul class="drop-down" id="demo">
         <li><a href="">
           <img
             class="twmg"
@@ -79,8 +109,9 @@ function myFunction() {
       />
       <h2>DuckDuckGo</h2>
       
-      <input  type="text" placeholder="search the web without being tracked" />
-      <i class="fa fa-search"  style="font-size:24px"></i>
+      <input class="input" type="search" placeholder="search the web without being tracked" />
+     <i  class=" menu-Big fa fa-search"
+       style="font-size:24px"></i>
       <br />
       <h3>Tired of being tracked online? We can help.</h3>
       <h4>
@@ -177,9 +208,11 @@ function myFunction() {
       <h2>Frequently Asked Questions</h2>
       <div class="last">
         <hr />
-        <div class="mon">
-          <h3 class="hk">
-            <img
+        <div class="mon"  id="mon">
+          
+        <button class="btn-mon" onclick="makeMoney()">   
+          <h3  class="hk">
+          <img
               id="ic"
               class="ico"
               src="assets/duckduck_dropdown-removebg-preview.png"
@@ -189,8 +222,8 @@ function myFunction() {
             />
             How does DuckDuckGo make money?
           </h3>
-
-          <div class="money">
+         </button>
+          <div id="money" class="money">
             We make our money from private ads on our search engine. On other
             search engines, ads are<br />
             based on profiles compiled about you using your personal information
@@ -203,17 +236,20 @@ function myFunction() {
           </div>
         </div>
         <hr />
-        <div class="mon">
-          <h3>
-            <img
+        <div class="mon"  id="mon">
+            <button class="btn-mon" onclick="makeMoneyOne()">
+              <h3>
+              <img
+              id="ic-one"
               class="ico"
               src="assets/duckduck_dropdown-removebg-preview.png"
               alt=" drop down icon"
               height="20px"
               width="20px"
-            />What does Google know about me?
-          </h3>
-          <div class="money">
+            />
+            What does Google know about me?
+          </h3></button>
+          <div id="moneyOne" class="money">
             Not only does Google keep your search history forever by default,
             their trackers have been found<br />
             on 75% of the top million websites, which means they are tracking
@@ -223,9 +259,12 @@ function myFunction() {
           </div>
         </div>
         <hr />
-        <div class="mon">
+        <div class="mon"  id="mon">
+          
+         <button class="btn-mon" onclick="makeMoneyTwo()">
           <h3>
-            <img
+          <img
+              id="ic-two"
               class="ico"
               src="assets/duckduck_dropdown-removebg-preview.png"
               alt=" drop down icon"
@@ -234,7 +273,8 @@ function myFunction() {
             />
             Why use DuckDuckgo instead of Google?
           </h3>
-          <div class="money">
+          </button>
+          <div id="moneyTwo" class="money">
             Ever notice ads constantly following you around? That’s in part
             because Google tracks your<br />
             searches and hides trackers on millions of websites. By contrast,
@@ -251,9 +291,11 @@ function myFunction() {
           </div>
         </div>
         <hr />
-        <div class="mon">
-          <h3>
+        <div class="mon"  id="mon">
+           <button class="btn-mon" onclick="makeMoneyThree()">
+            <h3>
             <img
+              id="ic-three"
               class="ico"
               src="assets/duckduck_dropdown-removebg-preview.png"
               alt=" drop down icon"
@@ -261,8 +303,8 @@ function myFunction() {
               width="20px"
             />
             How do DuckDuckgo search results compare to Google's?
-          </h3>
-          <div class="money">
+          </h3></button>
+          <div id="moneyThree" class="money">
             DuckDuckGo search gives you truly private search results without
             tradeoffs in result quality. We<br />
             have everything you’ve come to expect in an online search
@@ -275,9 +317,11 @@ function myFunction() {
           </div>
         </div>
         <hr />
-        <div class="mon">
-          <h3>
-            <img
+        <div class="mon"  id="mon">
+            <button class="btn-mon" onclick="makeMoneyFour()">
+              <h3>
+              <img
+              id="ic-four"
               class="ico"
               src="assets/duckduck_dropdown-removebg-preview.png"
               alt=" drop down icon"
@@ -285,8 +329,8 @@ function myFunction() {
               width="20px"
             />
             Is DuckDuckGo "unfiltered" search engine?
-          </h3>
-          <div class="money">
+          </h3></button>
+          <div id="moneyFour" class="money">
             Unlike some other search engines, we don’t alter search results
             based on someone’s previous<br />
             search history. In fact, since we don’t track our users we don’t
@@ -314,9 +358,10 @@ function myFunction() {
         </div>
         <hr />
 
-        <div class="mon">
-          <h3>
-            <img
+        <div class="mon"  id="mon">
+            <button class="btn-mon" onclick="makeMoneyFive()">
+              <h3><img
+              id="ic-five"
               class="ico"
               src="assets/duckduck_dropdown-removebg-preview.png"
               alt=" drop down icon"
@@ -324,8 +369,8 @@ function myFunction() {
               width="20px"
             />
             Is DuckDuckGo owned by Google?
-          </h3>
-          <div class="money">
+          </h3></button>
+          <div id="moneyFive" class="money">
             No, we are not and have never been owned by Google. We have been an
             independent company<br />
             since our founding in 2008 and, unlike some other search engines, we
@@ -339,9 +384,11 @@ function myFunction() {
         </div>
         <hr />
 
-        <div class="mon">
-          <h3>
-            <img
+        <div class="mon"  id="mon">
+          
+            <button class="btn-mon" onclick="makeMoneySix()">
+              <h3><img
+              id="ic-six"
               class="ico"
               src="assets/duckduck_dropdown-removebg-preview.png"
               alt=" drop down icon"
@@ -349,8 +396,8 @@ function myFunction() {
               width="20px"
             />
             What's the difference between using DuckDuckGo and Ingnito mode?
-          </h3>
-          <div class="money">
+          </h3></button>
+          <div id="moneySix" class="money">
             It is a myth that you can’t be tracked while using so-called
             “Incognito” mode.<br />
             In fact, Incognito mode mainly just deletes information on your
@@ -365,17 +412,19 @@ function myFunction() {
           </div>
         </div>
         <hr />
-        <div class="mon">
-          <h3>
-            <img
+        <div class="mon"  id="mon">
+            <button class="btn-mon" onclick="makeMoneySeven()">
+              <h3><img
+              id="ic-seven"
               class="ico"
               src="assets/duckduck_dropdown-removebg-preview.png"
               alt=" drop down icon"
               height="20px"
               width="20px"
-            />How popular is DuckDuckGo?
-          </h3>
-          <div class="money">
+            />
+            How popular is DuckDuckGo?
+          </h3></button>
+          <div id="moneySeven" class="money">
             We don’t track our users, so it’s actually impossible for us to know
             how many users in total are using<br />
             our products. However, we are able to make an estimate based on the
@@ -385,17 +434,20 @@ function myFunction() {
           </div>
         </div>
         <hr />
-        <div class="mon">
-          <h3>
-            <img
+        <div class="mon"  id="mon">
+            <button class="btn-mon" onclick="makeMoneyEight()">
+              <h3><img
+              id="ic-eight"
               class="ico"
               src="assets/duckduck_dropdown-removebg-preview.png"
               alt=" drop down icon"
               height="20px"
               width="20px"
-            />How does the DuckDuckGo app and extension works?
+            />
+            How does the DuckDuckGo app and extension works?
           </h3>
-          <div class="money">
+        </button>
+          <div id="moneyEight" class="money">
             The DuckDuckGo Privacy Browser mobile app and Privacy Essentials
             desktop extension both come<br />
             with our best-in-class tracker blocker, encryption enforcer, and
@@ -405,11 +457,254 @@ function myFunction() {
             curbing the constant monitoring of your Internet activity by
             companies like Google and<br />
             Facebook.<a href=""> Learn more.</a>
+            
           </div>
         </div>
         <hr />
+       
         <h5 class="duck last"><a href="">Add DuckDuckgo to chrome</a></h5>
       </div>
     </div>
+
+      <script>
+        // styling the menu bar
+        let menuSlide ;
+        menuSlide = document.getElementById('menuContainer')
+       let StoreMenuSlide = document.getElementById('menuContainer')
+        function menu(){
+         menuSlide.style.transform = 'translate(-0px)'
+        }
+        function menuSlideBack(){
+         StoreMenuSlide.style.transform = 'translate(210px)'
+        }
+        // You need to work on JavaScript Transition effect for this page
+        // onclick img dropup
+
+       
+        let dropUp = document.getElementById('ic')
+         dropUpOne = document.getElementById('ic-one'),
+          dropUpTwo = document.getElementById('ic-two'),
+         dropUpThree = document.getElementById('ic-three')
+         dropUpFour = document.getElementById('ic-four'),
+         dropUpFive = document.getElementById('ic-five'),
+         dropUpSix = document.getElementById('ic-six'),
+         dropUpSeven = document.getElementById('ic-seven'),
+         dropUpEight = document.getElementById('ic-eight'),
+        //  transition styling
+        shrink = document.getElementById('mon'),
+         
+        // onclick img dropdown
+         dropdown = document.getElementById('ico-one'),
+        // Onclick dropdown
+         moneyFunc = document.getElementById('money'),
+        moneyFuncOne = document.getElementById('moneyOne'),
+           moneyFuncTwo = document.getElementById('moneyTwo'),
+        moneyFuncThree = document.getElementById('moneyThree'),
+           moneyFuncFour = document.getElementById('moneyFour'),
+        moneyFuncFive = document.getElementById('moneyFive'),
+           moneyFuncSix = document.getElementById('moneySix'),
+        moneyFuncSeven = document.getElementById('moneySeven'),
+           moneyFuncEight = document.getElementById('moneyEight'),
+        Hover = document.getElementById("demo");
+
+function myFunction() {
+   Hover.style.display = "block";
+}
+
+function makeMoney(){
+  moneyFunc.style.display = 'block';
+  shrink.style.transition = 'ease-in';
+dropUp.src = 'assets/dropup.png';
+ moneyFuncOne.style.display = 'none';
+ moneyFuncTwo.style.display = 'none';
+ moneyFuncThree.style.display = 'none';
+ moneyFuncFour.style.display = 'none';
+ moneyFuncFive.style.display = 'none';
+ moneyFuncSix.style.display = 'none';
+ moneyFuncSeven.style.display = 'none';
+ moneyFuncEight.style.display = 'none';
+dropUpOne.src = 'assets/duckduck_dropdown-removebg-preview.png';
+dropUpTwo.src = 'assets/duckduck_dropdown-removebg-preview.png';
+dropUpThree.src = 'assets/duckduck_dropdown-removebg-preview.png';
+dropUpFour.src = 'assets/duckduck_dropdown-removebg-preview.png';
+dropUpFive.src = 'assets/duckduck_dropdown-removebg-preview.png';
+dropUpSix.src = 'assets/duckduck_dropdown-removebg-preview.png';
+dropUpSeven.src = 'assets/duckduck_dropdown-removebg-preview.png';
+dropUpEight.src = 'assets/duckduck_dropdown-removebg-preview.png';
+}
+function makeMoneyOne(){
+  moneyFuncOne.style.display = 'block';
+moneyFunc.style.display = 'none';
+ moneyFuncTwo.style.display = 'none';
+ moneyFuncThree.style.display = 'none';
+ moneyFuncFour.style.display = 'none';
+ moneyFuncFive.style.display = 'none';
+ moneyFuncSix.style.display = 'none';
+ moneyFuncSeven.style.display = 'none';
+ moneyFuncEight.style.display = 'none';
+dropUpOne.src = 'assets/dropup.png';
+dropUp.src = 'assets/duckduck_dropdown-removebg-preview.png';
+dropUpTwo.src = 'assets/duckduck_dropdown-removebg-preview.png';
+dropUpThree.src = 'assets/duckduck_dropdown-removebg-preview.png';
+dropUpFour.src = 'assets/duckduck_dropdown-removebg-preview.png';
+dropUpFive.src = 'assets/duckduck_dropdown-removebg-preview.png';
+dropUpSix.src = 'assets/duckduck_dropdown-removebg-preview.png';
+dropUpSeven.src = 'assets/duckduck_dropdown-removebg-preview.png';
+dropUpEight.src = 'assets/duckduck_dropdown-removebg-preview.png';
+}
+function makeMoneyTwo(){
+  moneyFuncTwo.style.display = 'block';
+  moneyFuncOne.style.display = 'none';
+  moneyFunc.style.display = 'none';
+moneyFuncOne.style.display = 'none';
+ moneyFuncThree.style.display = 'none';
+ moneyFuncFour.style.display = 'none';
+ moneyFuncFive.style.display = 'none';
+ moneyFuncSix.style.display = 'none';
+ moneyFuncSeven.style.display = 'none';
+ moneyFuncEight.style.display = 'none';
+dropUpTwo.src = 'assets/dropup.png';
+ dropUp.src = 'assets/duckduck_dropdown-removebg-preview.png';
+dropUpOne.src = 'assets/duckduck_dropdown-removebg-preview.png';
+dropUpThree.src = 'assets/duckduck_dropdown-removebg-preview.png';
+dropUpFour.src = 'assets/duckduck_dropdown-removebg-preview.png';
+dropUpFive.src = 'assets/duckduck_dropdown-removebg-preview.png';
+dropUpSix.src = 'assets/duckduck_dropdown-removebg-preview.png';
+dropUpSeven.src = 'assets/duckduck_dropdown-removebg-preview.png';
+dropUpEight.src = 'assets/duckduck_dropdown-removebg-preview.png';
+
+}
+function makeMoneyThree(){
+  moneyFuncThree.style.display = 'block';
+moneyFuncTwo.style.display = 'none';
+moneyFunc.style.display = 'none';
+moneyFuncOne.style.display = 'none';
+ moneyFuncTwo.style.display = 'none';
+ moneyFuncFour.style.display = 'none';
+ moneyFuncFive.style.display = 'none';
+ moneyFuncSix.style.display = 'none';
+ moneyFuncSeven.style.display = 'none';
+ moneyFuncEight.style.display = 'none';
+dropUpThree.src = 'assets/dropup.png';
+ dropUp.src = 'assets/duckduck_dropdown-removebg-preview.png';
+dropUpOne.src = 'assets/duckduck_dropdown-removebg-preview.png';
+dropUpTwo.src = 'assets/duckduck_dropdown-removebg-preview.png';
+dropUpFour.src = 'assets/duckduck_dropdown-removebg-preview.png';
+dropUpFive.src = 'assets/duckduck_dropdown-removebg-preview.png';
+dropUpSix.src = 'assets/duckduck_dropdown-removebg-preview.png';
+dropUpSeven.src = 'assets/duckduck_dropdown-removebg-preview.png';
+dropUpEight.src = 'assets/duckduck_dropdown-removebg-preview.png';
+}
+function makeMoneyFour(){
+  moneyFuncFour.style.display = 'block';
+  moneyFuncThree.style.display = 'none';
+  moneyFunc.style.display = 'none';
+moneyFuncOne.style.display = 'none';
+ moneyFuncTwo.style.display = 'none';
+ moneyFuncThree.style.display = 'none';
+ moneyFuncFive.style.display = 'none';
+ moneyFuncSix.style.display = 'none';
+ moneyFuncSeven.style.display = 'none';
+ moneyFuncEight.style.display = 'none';
+dropUpFour.src = 'assets/dropup.png';
+ dropUp.src = 'assets/duckduck_dropdown-removebg-preview.png';
+dropUpOne.src = 'assets/duckduck_dropdown-removebg-preview.png';
+dropUpTwo.src = 'assets/duckduck_dropdown-removebg-preview.png';
+dropUpThree.src = 'assets/duckduck_dropdown-removebg-preview.png';
+dropUpFive.src = 'assets/duckduck_dropdown-removebg-preview.png';
+dropUpSix.src = 'assets/duckduck_dropdown-removebg-preview.png';
+dropUpSeven.src = 'assets/duckduck_dropdown-removebg-preview.png';
+dropUpEight.src = 'assets/duckduck_dropdown-removebg-preview.png';
+
+}
+function makeMoneyFive(){
+  moneyFuncFive.style.display = 'block';
+moneyFuncFour.style.display = 'none';
+moneyFunc.style.display = 'none';
+moneyFuncOne.style.display = 'none';
+ moneyFuncTwo.style.display = 'none';
+ moneyFuncThree.style.display = 'none';
+ moneyFuncFour.style.display = 'none';
+ moneyFuncSix.style.display = 'none';
+ moneyFuncSeven.style.display = 'none';
+ moneyFuncEight.style.display = 'none';
+dropUpFive.src = 'assets/dropup.png';
+ dropUp.src = 'assets/duckduck_dropdown-removebg-preview.png';
+dropUpOne.src = 'assets/duckduck_dropdown-removebg-preview.png';
+dropUpTwo.src = 'assets/duckduck_dropdown-removebg-preview.png';
+dropUpThree.src = 'assets/duckduck_dropdown-removebg-preview.png';
+dropUpFour.src = 'assets/duckduck_dropdown-removebg-preview.png';
+dropUpSix.src = 'assets/duckduck_dropdown-removebg-preview.png';
+dropUpSeven.src = 'assets/duckduck_dropdown-removebg-preview.png';
+dropUpEight.src = 'assets/duckduck_dropdown-removebg-preview.png';
+}
+
+function makeMoneySix(){
+  moneyFuncSix.style.display = 'block';
+  moneyFuncFive.style.display = 'none';
+  moneyFunc.style.display = 'none';
+moneyFuncOne.style.display = 'none';
+ moneyFuncTwo.style.display = 'none';
+ moneyFuncThree.style.display = 'none';
+ moneyFuncFour.style.display = 'none';
+ moneyFuncFive.style.display = 'none';
+ moneyFuncSeven.style.display = 'none';
+ moneyFuncEight.style.display = 'none';
+dropUpSix.src = 'assets/dropup.png';
+ dropUp.src = 'assets/duckduck_dropdown-removebg-preview.png';
+dropUpOne.src = 'assets/duckduck_dropdown-removebg-preview.png';
+dropUpTwo.src = 'assets/duckduck_dropdown-removebg-preview.png';
+dropUpThree.src = 'assets/duckduck_dropdown-removebg-preview.png';
+dropUpFour.src = 'assets/duckduck_dropdown-removebg-preview.png';
+dropUpFive.src = 'assets/duckduck_dropdown-removebg-preview.png';
+dropUpSeven.src = 'assets/duckduck_dropdown-removebg-preview.png';
+dropUpEight.src = 'assets/duckduck_dropdown-removebg-preview.png';
+}
+function makeMoneySeven(){
+  moneyFuncSeven.style.display = 'block';
+moneyFuncSix.style.display = 'none';
+moneyFuncEight.style.display = 'none';
+moneyFunc.style.display = 'none';
+moneyFuncOne.style.display = 'none';
+ moneyFuncTwo.style.display = 'none';
+ moneyFuncThree.style.display = 'none';
+ moneyFuncFour.style.display = 'none';
+ moneyFuncFive.style.display = 'none';
+ moneyFuncSix.style.display = 'none';
+ moneyFuncEight.style.display = 'none';
+dropUpSeven.src = 'assets/dropup.png';
+ dropUp.src = 'assets/duckduck_dropdown-removebg-preview.png';
+dropUpOne.src = 'assets/duckduck_dropdown-removebg-preview.png';
+dropUpTwo.src = 'assets/duckduck_dropdown-removebg-preview.png';
+dropUpThree.src = 'assets/duckduck_dropdown-removebg-preview.png';
+dropUpFour.src = 'assets/duckduck_dropdown-removebg-preview.png';
+dropUpFive.src = 'assets/duckduck_dropdown-removebg-preview.png';
+dropUpSix.src = 'assets/duckduck_dropdown-removebg-preview.png';
+dropUpEight.src = 'assets/duckduck_dropdown-removebg-preview.png';
+}
+function makeMoneyEight(){
+  moneyFuncEight.style.display = 'block';
+moneyFuncSeven.style.display = 'none';
+moneyFunc.style.display = 'none';
+moneyFuncOne.style.display = 'none';
+ moneyFuncTwo.style.display = 'none';
+ moneyFuncThree.style.display = 'none';
+ moneyFuncFour.style.display = 'none';
+ moneyFuncFive.style.display = 'none';
+ moneyFuncSix.style.display = 'none';
+ moneyFuncSeven.style.display = 'none';
+dropUpEight.src = 'assets/dropup.png';
+dropUpSeven.src = 'assets/duckduck_dropdown-removebg-preview.png';
+ dropUp.src = 'assets/duckduck_dropdown-removebg-preview.png';
+dropUpOne.src = 'assets/duckduck_dropdown-removebg-preview.png';
+dropUpTwo.src = 'assets/duckduck_dropdown-removebg-preview.png';
+dropUpThree.src = 'assets/duckduck_dropdown-removebg-preview.png';
+dropUpFour.src = 'assets/duckduck_dropdown-removebg-preview.png';
+dropUpFive.src = 'assets/duckduck_dropdown-removebg-preview.png';
+dropUpSix.src = 'assets/duckduck_dropdown-removebg-preview.png';
+}
+</script>
   </body>
 </html>
+
+
