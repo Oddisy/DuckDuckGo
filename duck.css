@@ -9,7 +9,7 @@ body {
 }
 
        
-/* Styling the menu container  */
+/* Styling the cross icon for returning the menu slider  */
 .return{
   font-size: 25px;
   border: none;
@@ -21,9 +21,11 @@ body {
  left: 5px;
  top: 15px;
 }
+/* style for return slider on hover */
 .return:hover{
  color: rgb(128, 124, 124);
 }
+/* style for menu slide container and content */
 .menu-container{
   width: 200px;
   height: 100vh;
@@ -39,40 +41,52 @@ body {
   transition: transform 0.5s;
   transform: translate(210px);
 }
+/* style for menu slide container > ul */
 .menu-container > ul {
    margin:15px 0px 30px 0px;
    font-size: 15px;
 }
+
+/*style menu slide li a  */
 .menu-container > ul > li a {
-  /* color:rgb(102, 102, 102); */
+  color:#616161;
 text-decoration: none;
+font-size: 14px;
 }
-.menu-container-child > li:first-child {
-   margin-bottom:15px;
-   font-weight:200;
-   font-size: 14px;
+/* Text decoration for the menu slide li on hover not li:first-child(1n) */
+.menu-container > ul > li a:hover:not(.con-first){
+text-decoration: underline;
+}
+/* style for the li first child */
+.menu-container-child .con-first{
+   font-weight:500;
+   font-size: 10px;
    text-decoration: none;
-    color:rgb(191, 191, 191);
+    color:rgb(161, 159, 159);
     text-transform: uppercase;
-    
+    cursor:auto;
+}
+/* style for the li first child */
+.menu-container-child > li:first-child{
+  margin-bottom: 10px;
 }
 
-.menu-container > ul > li a:first-child {
-/* color:red; */
-}
-
+/* style for the menu container ul first child */
 .menu-container > ul:nth-child(1n) {
    margin-bottom: 30px;
 }
+/* style for the ul > li */
 .menu-container > ul >li{
   list-style-type: none;
+   margin-bottom: 6px;
 }
-
+/* style for the social media container in the header */
 .soc {
   float: right;
   margin-right: 110px;
   margin-top: 30px;
 }
+/* style for the button to display menu slider */
 
 .menu {
   position: absolute;
@@ -82,7 +96,7 @@ text-decoration: none;
   opacity: 0.4;
   margin-left: 20px;
 }
-
+ /* Container for the list of social medias  in the main-media-container */
 .drop-down {
   position: absolute;
   display: none;
@@ -98,41 +112,44 @@ text-decoration: none;
   -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
   padding: 15px 0px 15px 12px;
 }
+/* button for speaker icon and dropdown icon for the social medias in the header section */
 .btn-head{
   background-color: inherit;
   border: none;
 }
-
+ /* Container for the list of social medias  in the Main-container--> */
 .drop-down li {
   margin-right: 10px;
 }
-
 .drop-down li a{
  color:black;
  text-decoration: none;
 }
 
-
+/* pictures of social media in the main-media-container  */
 .twmg {
   position: relative;
   top: 4px;
   margin-right: 7px;
 }
+  /*  Main-Container for social medias  in the header */
 
 .soc:hover ul {
   list-style-type: none;
 }
-
+/* duckduckgo sectionOne */
 .main {
   position: absolute;
   top: 10%;
   left: 25%;
   height: 600px;
 }
+/* duckduckgo logo style */
 .main > img {
   margin-top: 40px;
   margin-left: 310px;
 }
+/*  */
 .main > h2 {
   font-weight: 100;
   text-indent: 260px;
@@ -186,14 +203,11 @@ input[type="checkbox"] {
   width: 94rem;
   position: absolute;
   top: 60%;
-  /* background-color:red; */
-  /* margin-bottom: 30px; */
 }
 .personal-root {
   border-radius: 500px 500px 0 0/25px 25px 0 0;
   background-color: #e37151;
   padding-top: 280px;
-
 }
 
 .flex {
@@ -256,7 +270,6 @@ input[type="checkbox"] {
   text-decoration: none;
 }
 .personal {
-  /* transform: translate(30rem, 0rem); */
  margin-left: 30rem;
 
 }
@@ -280,25 +293,25 @@ input[type="checkbox"] {
   color: white;
   text-decoration: none;
   margin-top: 50px;
-
   margin-left: 97px;
   margin-bottom: 50px;
   border-radius: 10px;
 }
+/* style for the image of a girl burning piece of a paper  */
 .duc {
   object-fit: fill;
   margin-left: 320px;
   position: relative;
   top: 4px;
 }
-
+/* style for h2:last-of-type in the footer section */
 .con > h2:last-of-type {
   text-align: center;
   margin-top: 89px;
   font-size: 35px;
   margin-bottom: 60px;
 }
-
+/* style for h3 in the footer section */
 .con > h2 + .last h3 {
   margin-left: 330px;
   font-size: 20px;
@@ -306,7 +319,7 @@ input[type="checkbox"] {
   padding: 15px;
   align-items: center;
 }
-
+/* style for hr:not:(last-child) in the footer section */
 .con > h2 + .last hr {
   margin-left: 350px;
   opacity: 0.2;
@@ -314,23 +327,8 @@ input[type="checkbox"] {
   width: 650px;
 }
 
-.money {
-  display: none;
-  margin-left: 330px;
-  font-size: 15px;
-  line-height: 30px;
-  font-weight: 400;
-  color: #7a7777;
-  margin-left: 390px;
-  padding-bottom:30px;
- visibility: none;
-/* height: 1px; */
-/* transition: height 3s;
-transition-timing-function: ease-in; */
-transition-timing-function: ease-in;
-  transition: transform 0.5s;
-}
 
+/* class for buttons in the footer section */
 
 .btn-mon{
   border: none;
@@ -342,22 +340,24 @@ transition-timing-function: ease-in;
   text-decoration: none;
   color: #678fff;
 }
-
+/* link tag in the  */
 .mon .money a:hover {
   text-decoration: underline;
 }
-
+/* Last hr of the page */
 hr:last-of-type {
   margin-bottom: 50px;
 }
-
+/* h5 containing the Add duckduckgo to chrome */
 h5:last-of-type {
   margin-left: 300px;
 }
+/* style for the dropdown image beside in the foooter section */
 .ico {
   margin-right: 15px;
   margin-bottom: 0px;
 }
+    /* Speaker style for  Container of  social medias in the header */
 .down {
   opacity: 0.4;
 }
@@ -373,14 +373,30 @@ height: 47px;
   color: #6d6767;
 
 }
+/* style for search icon on hover */
 .menu-Big:hover{
   background-color: #174bdb;
   opacity: 1;
   color:white;
 }
-/* styling frequently ask questions child */
+/* styling the Container child for the display onclick in the footer section */
+.money {
+  display: none;
+  margin-left: 330px;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 400;
+  color: #7a7777;
+  margin-left: 390px;
+  padding-bottom:30px;
+}
+/* style for the containers onclick in the footer section */
 .last > .mon{
-/* display:none; */
-/* transition: height 3s; */
-
+transition-timing-function: ease-in;
+transition: height 0.4s;
+padding: 15px;
+}
+/* footer content one display  load of the page  */
+.last > .mon .zero{
+  display:block;
 }

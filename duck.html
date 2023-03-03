@@ -5,51 +5,61 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DuckDuckGO Clone</title>
+     <script src="duck.js" defer>
+</script>
      <link rel="stylesheet" href="duck.css">
   <link rel="stylesheet" href=
   "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css">
   </link>
   </head>
 
-  <body>
-
+  <body id="close" >
+<!-- The menu slide -->
     <ul id="menuContainer" class="menu-container">
         <button class="return" onclick="menuSlideBack()"> 
           <i class="fa fa-close"></i></button>
       <ul class="menu-container-child">
-        <li><a href="">Settings</a></li>
+        <li><a  class="con-first" href="" target="_self">Settings</a></li>
         <li><a href="">Themes</a></li>
         <li><a href="">All Settings</a></li>
         <li><a href="">!Bang Search Shortcuts</a></li>
       </ul>
       <ul class="menu-container-child">
-        <li><a href="">PRIVACY ESSENTIALS</a></li>
-        <li><a href="">Themes</a></li>
-        <li><a href="">All Settings</a></li>
-        <li><a href="">!Bang Search Shortcuts</a></li>
+        <li ><a class="con-first"  href="">PRIVACY ESSENTIALS</a></li>
+        <li><a href="">Private Search</a></li>
+        <li><a href="">App and Extension</a></li>
       </ul>
       <ul class="menu-container-child">
-       <li><a href="">Settings</a></li>
-        <li><a href="">Themes</a></li>
-        <li><a href="">All Settings</a></li>
-        <li><a href="">!Bang Search Shortcuts</a></li>
+       <li><a class="con-first"  href="">WHY PRIVACY</a></li>
+        <li><a href="">Privacy Blog</a></li>
+        <li><a href="">Privacy Newsletter</a></li>
+        <li><a href="">Help Spread DuckDuckGo!</a></li>
       </ul>
       <ul class="menu-container-child">
-        <li><a href="">Settings</a></li>
-        <li><a href="">Themes</a></li>
-        <li><a href="">All Settings</a></li>
-        <li><a href="">!Bang Search Shortcuts</a></li>
+        <li><a class="con-first"  href="">WHO WE ARE </a></li>
+        <li><a href="">About Us </a></li>
+        <li><a href="">Privacy Policy</a></li>
+        <li><a href="">Careers</a></li>
+         <li><a href="">Press Kit</a></li>
       </ul>
+      <ul class="menu-container-child">
+        <li><a class="con-first"  href="">KEEP IN TOUCH  </a></li>
+        <li><a href="">Twitter</a></li>
+        <li><a href="">Reddit</a></li>
+        <li><a href="">Help</a></li>
+      </ul>
+    </ul>
     </ul>
 
     
 
-
+<!-- Button to display menu slider -->
     <button onclick="menu()"><img class="menu" src="assets/duckduckmenu-removebg-preview.png" 
     alt="menu bar" height="45px"
       width="45px"></button>
-    
-    
+
+
+    <!-- Main-Container for social medias  in the header-->
     <div  class="soc">
       <button type="button" class="btn-head" onclick="myFunction()">
       <img class="down" src="assets/duckduckspeaker-removebg-preview.png " alt="speaker"  height="30px"
@@ -57,7 +67,7 @@
       
      <img  src="assets/duckduckdropdownn-removebg-preview.png " alt="dropdown"  height="20px"
       width="20px"></button> 
-      
+      <!-- Container for the list of social medias  in the main-media-container-->
       <ul class="drop-down" id="demo">
         <li><a href="">
           <img
@@ -100,7 +110,8 @@
           Newsletter</a></li>
       </ul>
     </div>
-    <div class="main">
+    <!-- section One -->
+    <section class="main">
       <img
         src="assets/DuckDuckGo Image.png"
         alt="duckduckgo image"
@@ -108,7 +119,7 @@
         width="120px"
       />
       <h2>DuckDuckGo</h2>
-      
+      <!-- A Search input  -->
       <input class="input" type="search" placeholder="search the web without being tracked" />
      <i  class=" menu-Big fa fa-search"
        style="font-size:24px"></i>
@@ -133,7 +144,7 @@
       <h4 class="duck two"><a href="">Add DuckDuckgo to chrome</a></h4>
       <h6>Trusted by tens of millions worldwide!</h6>
       <p>Privacy Protection For Any Device</p>
-    </div>
+    </section>
     <div class="con">
       <div class="flex">
         <div>
@@ -204,10 +215,11 @@
         width="50%"
       />
       </div>
-     
+     <!-- Style for the footer -->
       <h2>Frequently Asked Questions</h2>
       <div class="last">
         <hr />
+        <!-- Container for the first display onclick in the footer section  -->
         <div class="mon"  id="mon">
           
         <button class="btn-mon" onclick="makeMoney()">   
@@ -215,7 +227,7 @@
           <img
               id="ic"
               class="ico"
-              src="assets/duckduck_dropdown-removebg-preview.png"
+              src="assets/dropup.png"
               alt=" drop down icon"
               height="20px"
               width="20px"
@@ -223,7 +235,7 @@
             How does DuckDuckGo make money?
           </h3>
          </button>
-          <div id="money" class="money">
+          <div id="money" class="money zero">
             We make our money from private ads on our search engine. On other
             search engines, ads are<br />
             based on profiles compiled about you using your personal information
@@ -236,7 +248,8 @@
           </div>
         </div>
         <hr />
-        <div class="mon"  id="mon">
+         <!-- Container for the Second display onclick in the footer section  -->
+        <div class="mon"  id="monOne">
             <button class="btn-mon" onclick="makeMoneyOne()">
               <h3>
               <img
@@ -249,7 +262,7 @@
             />
             What does Google know about me?
           </h3></button>
-          <div id="moneyOne" class="money">
+          <div id="moneyOne" class="money one">
             Not only does Google keep your search history forever by default,
             their trackers have been found<br />
             on 75% of the top million websites, which means they are tracking
@@ -259,7 +272,8 @@
           </div>
         </div>
         <hr />
-        <div class="mon"  id="mon">
+         <!-- Container for the Third display onclick in the footer section  -->
+        <div class="mon Two"  id="monTwo">
           
          <button class="btn-mon" onclick="makeMoneyTwo()">
           <h3>
@@ -274,7 +288,8 @@
             Why use DuckDuckgo instead of Google?
           </h3>
           </button>
-          <div id="moneyTwo" class="money">
+          
+          <div id="moneyTwo" class="money Two">
             Ever notice ads constantly following you around? That’s in part
             because Google tracks your<br />
             searches and hides trackers on millions of websites. By contrast,
@@ -291,7 +306,8 @@
           </div>
         </div>
         <hr />
-        <div class="mon"  id="mon">
+         <!-- Container for the fourth display onclick in the footer section  -->
+        <div class="mon"  id="monThree">
            <button class="btn-mon" onclick="makeMoneyThree()">
             <h3>
             <img
@@ -317,7 +333,8 @@
           </div>
         </div>
         <hr />
-        <div class="mon"  id="mon">
+         <!-- Container for the fifth display onclick in the footer section  -->
+        <div class="mon"  id="monFour">
             <button class="btn-mon" onclick="makeMoneyFour()">
               <h3>
               <img
@@ -357,8 +374,8 @@
           </div>
         </div>
         <hr />
-
-        <div class="mon"  id="mon">
+ <!-- Container for the sixth display onclick in the footer section  -->
+        <div class="mon"  id="monFive">
             <button class="btn-mon" onclick="makeMoneyFive()">
               <h3><img
               id="ic-five"
@@ -383,8 +400,8 @@
           </div>
         </div>
         <hr />
-
-        <div class="mon"  id="mon">
+ <!-- Container for the seventh display onclick in the footer section  -->
+        <div class="mon"  id="monSix">
           
             <button class="btn-mon" onclick="makeMoneySix()">
               <h3><img
@@ -412,7 +429,8 @@
           </div>
         </div>
         <hr />
-        <div class="mon"  id="mon">
+         <!-- Container for the Eight display onclick in the footer section  -->
+        <div class="mon"  id="monSeven">
             <button class="btn-mon" onclick="makeMoneySeven()">
               <h3><img
               id="ic-seven"
@@ -434,7 +452,8 @@
           </div>
         </div>
         <hr />
-        <div class="mon"  id="mon">
+         <!-- Container for the Nineth display onclick in the footer section  -->
+        <div class="mon"  id="monEight">
             <button class="btn-mon" onclick="makeMoneyEight()">
               <h3><img
               id="ic-eight"
@@ -466,244 +485,7 @@
       </div>
     </div>
 
-      <script>
-        // styling the menu bar
-        let menuSlide ;
-        menuSlide = document.getElementById('menuContainer')
-       let StoreMenuSlide = document.getElementById('menuContainer')
-        function menu(){
-         menuSlide.style.transform = 'translate(-0px)'
-        }
-        function menuSlideBack(){
-         StoreMenuSlide.style.transform = 'translate(210px)'
-        }
-        // You need to work on JavaScript Transition effect for this page
-        // onclick img dropup
-
-       
-        let dropUp = document.getElementById('ic')
-         dropUpOne = document.getElementById('ic-one'),
-          dropUpTwo = document.getElementById('ic-two'),
-         dropUpThree = document.getElementById('ic-three')
-         dropUpFour = document.getElementById('ic-four'),
-         dropUpFive = document.getElementById('ic-five'),
-         dropUpSix = document.getElementById('ic-six'),
-         dropUpSeven = document.getElementById('ic-seven'),
-         dropUpEight = document.getElementById('ic-eight'),
-        //  transition styling
-        shrink = document.getElementById('mon'),
-         
-        // onclick img dropdown
-         dropdown = document.getElementById('ico-one'),
-        // Onclick dropdown
-         moneyFunc = document.getElementById('money'),
-        moneyFuncOne = document.getElementById('moneyOne'),
-           moneyFuncTwo = document.getElementById('moneyTwo'),
-        moneyFuncThree = document.getElementById('moneyThree'),
-           moneyFuncFour = document.getElementById('moneyFour'),
-        moneyFuncFive = document.getElementById('moneyFive'),
-           moneyFuncSix = document.getElementById('moneySix'),
-        moneyFuncSeven = document.getElementById('moneySeven'),
-           moneyFuncEight = document.getElementById('moneyEight'),
-        Hover = document.getElementById("demo");
-
-function myFunction() {
-   Hover.style.display = "block";
-}
-
-function makeMoney(){
-  moneyFunc.style.display = 'block';
-  shrink.style.transition = 'ease-in';
-dropUp.src = 'assets/dropup.png';
- moneyFuncOne.style.display = 'none';
- moneyFuncTwo.style.display = 'none';
- moneyFuncThree.style.display = 'none';
- moneyFuncFour.style.display = 'none';
- moneyFuncFive.style.display = 'none';
- moneyFuncSix.style.display = 'none';
- moneyFuncSeven.style.display = 'none';
- moneyFuncEight.style.display = 'none';
-dropUpOne.src = 'assets/duckduck_dropdown-removebg-preview.png';
-dropUpTwo.src = 'assets/duckduck_dropdown-removebg-preview.png';
-dropUpThree.src = 'assets/duckduck_dropdown-removebg-preview.png';
-dropUpFour.src = 'assets/duckduck_dropdown-removebg-preview.png';
-dropUpFive.src = 'assets/duckduck_dropdown-removebg-preview.png';
-dropUpSix.src = 'assets/duckduck_dropdown-removebg-preview.png';
-dropUpSeven.src = 'assets/duckduck_dropdown-removebg-preview.png';
-dropUpEight.src = 'assets/duckduck_dropdown-removebg-preview.png';
-}
-function makeMoneyOne(){
-  moneyFuncOne.style.display = 'block';
-moneyFunc.style.display = 'none';
- moneyFuncTwo.style.display = 'none';
- moneyFuncThree.style.display = 'none';
- moneyFuncFour.style.display = 'none';
- moneyFuncFive.style.display = 'none';
- moneyFuncSix.style.display = 'none';
- moneyFuncSeven.style.display = 'none';
- moneyFuncEight.style.display = 'none';
-dropUpOne.src = 'assets/dropup.png';
-dropUp.src = 'assets/duckduck_dropdown-removebg-preview.png';
-dropUpTwo.src = 'assets/duckduck_dropdown-removebg-preview.png';
-dropUpThree.src = 'assets/duckduck_dropdown-removebg-preview.png';
-dropUpFour.src = 'assets/duckduck_dropdown-removebg-preview.png';
-dropUpFive.src = 'assets/duckduck_dropdown-removebg-preview.png';
-dropUpSix.src = 'assets/duckduck_dropdown-removebg-preview.png';
-dropUpSeven.src = 'assets/duckduck_dropdown-removebg-preview.png';
-dropUpEight.src = 'assets/duckduck_dropdown-removebg-preview.png';
-}
-function makeMoneyTwo(){
-  moneyFuncTwo.style.display = 'block';
-  moneyFuncOne.style.display = 'none';
-  moneyFunc.style.display = 'none';
-moneyFuncOne.style.display = 'none';
- moneyFuncThree.style.display = 'none';
- moneyFuncFour.style.display = 'none';
- moneyFuncFive.style.display = 'none';
- moneyFuncSix.style.display = 'none';
- moneyFuncSeven.style.display = 'none';
- moneyFuncEight.style.display = 'none';
-dropUpTwo.src = 'assets/dropup.png';
- dropUp.src = 'assets/duckduck_dropdown-removebg-preview.png';
-dropUpOne.src = 'assets/duckduck_dropdown-removebg-preview.png';
-dropUpThree.src = 'assets/duckduck_dropdown-removebg-preview.png';
-dropUpFour.src = 'assets/duckduck_dropdown-removebg-preview.png';
-dropUpFive.src = 'assets/duckduck_dropdown-removebg-preview.png';
-dropUpSix.src = 'assets/duckduck_dropdown-removebg-preview.png';
-dropUpSeven.src = 'assets/duckduck_dropdown-removebg-preview.png';
-dropUpEight.src = 'assets/duckduck_dropdown-removebg-preview.png';
-
-}
-function makeMoneyThree(){
-  moneyFuncThree.style.display = 'block';
-moneyFuncTwo.style.display = 'none';
-moneyFunc.style.display = 'none';
-moneyFuncOne.style.display = 'none';
- moneyFuncTwo.style.display = 'none';
- moneyFuncFour.style.display = 'none';
- moneyFuncFive.style.display = 'none';
- moneyFuncSix.style.display = 'none';
- moneyFuncSeven.style.display = 'none';
- moneyFuncEight.style.display = 'none';
-dropUpThree.src = 'assets/dropup.png';
- dropUp.src = 'assets/duckduck_dropdown-removebg-preview.png';
-dropUpOne.src = 'assets/duckduck_dropdown-removebg-preview.png';
-dropUpTwo.src = 'assets/duckduck_dropdown-removebg-preview.png';
-dropUpFour.src = 'assets/duckduck_dropdown-removebg-preview.png';
-dropUpFive.src = 'assets/duckduck_dropdown-removebg-preview.png';
-dropUpSix.src = 'assets/duckduck_dropdown-removebg-preview.png';
-dropUpSeven.src = 'assets/duckduck_dropdown-removebg-preview.png';
-dropUpEight.src = 'assets/duckduck_dropdown-removebg-preview.png';
-}
-function makeMoneyFour(){
-  moneyFuncFour.style.display = 'block';
-  moneyFuncThree.style.display = 'none';
-  moneyFunc.style.display = 'none';
-moneyFuncOne.style.display = 'none';
- moneyFuncTwo.style.display = 'none';
- moneyFuncThree.style.display = 'none';
- moneyFuncFive.style.display = 'none';
- moneyFuncSix.style.display = 'none';
- moneyFuncSeven.style.display = 'none';
- moneyFuncEight.style.display = 'none';
-dropUpFour.src = 'assets/dropup.png';
- dropUp.src = 'assets/duckduck_dropdown-removebg-preview.png';
-dropUpOne.src = 'assets/duckduck_dropdown-removebg-preview.png';
-dropUpTwo.src = 'assets/duckduck_dropdown-removebg-preview.png';
-dropUpThree.src = 'assets/duckduck_dropdown-removebg-preview.png';
-dropUpFive.src = 'assets/duckduck_dropdown-removebg-preview.png';
-dropUpSix.src = 'assets/duckduck_dropdown-removebg-preview.png';
-dropUpSeven.src = 'assets/duckduck_dropdown-removebg-preview.png';
-dropUpEight.src = 'assets/duckduck_dropdown-removebg-preview.png';
-
-}
-function makeMoneyFive(){
-  moneyFuncFive.style.display = 'block';
-moneyFuncFour.style.display = 'none';
-moneyFunc.style.display = 'none';
-moneyFuncOne.style.display = 'none';
- moneyFuncTwo.style.display = 'none';
- moneyFuncThree.style.display = 'none';
- moneyFuncFour.style.display = 'none';
- moneyFuncSix.style.display = 'none';
- moneyFuncSeven.style.display = 'none';
- moneyFuncEight.style.display = 'none';
-dropUpFive.src = 'assets/dropup.png';
- dropUp.src = 'assets/duckduck_dropdown-removebg-preview.png';
-dropUpOne.src = 'assets/duckduck_dropdown-removebg-preview.png';
-dropUpTwo.src = 'assets/duckduck_dropdown-removebg-preview.png';
-dropUpThree.src = 'assets/duckduck_dropdown-removebg-preview.png';
-dropUpFour.src = 'assets/duckduck_dropdown-removebg-preview.png';
-dropUpSix.src = 'assets/duckduck_dropdown-removebg-preview.png';
-dropUpSeven.src = 'assets/duckduck_dropdown-removebg-preview.png';
-dropUpEight.src = 'assets/duckduck_dropdown-removebg-preview.png';
-}
-
-function makeMoneySix(){
-  moneyFuncSix.style.display = 'block';
-  moneyFuncFive.style.display = 'none';
-  moneyFunc.style.display = 'none';
-moneyFuncOne.style.display = 'none';
- moneyFuncTwo.style.display = 'none';
- moneyFuncThree.style.display = 'none';
- moneyFuncFour.style.display = 'none';
- moneyFuncFive.style.display = 'none';
- moneyFuncSeven.style.display = 'none';
- moneyFuncEight.style.display = 'none';
-dropUpSix.src = 'assets/dropup.png';
- dropUp.src = 'assets/duckduck_dropdown-removebg-preview.png';
-dropUpOne.src = 'assets/duckduck_dropdown-removebg-preview.png';
-dropUpTwo.src = 'assets/duckduck_dropdown-removebg-preview.png';
-dropUpThree.src = 'assets/duckduck_dropdown-removebg-preview.png';
-dropUpFour.src = 'assets/duckduck_dropdown-removebg-preview.png';
-dropUpFive.src = 'assets/duckduck_dropdown-removebg-preview.png';
-dropUpSeven.src = 'assets/duckduck_dropdown-removebg-preview.png';
-dropUpEight.src = 'assets/duckduck_dropdown-removebg-preview.png';
-}
-function makeMoneySeven(){
-  moneyFuncSeven.style.display = 'block';
-moneyFuncSix.style.display = 'none';
-moneyFuncEight.style.display = 'none';
-moneyFunc.style.display = 'none';
-moneyFuncOne.style.display = 'none';
- moneyFuncTwo.style.display = 'none';
- moneyFuncThree.style.display = 'none';
- moneyFuncFour.style.display = 'none';
- moneyFuncFive.style.display = 'none';
- moneyFuncSix.style.display = 'none';
- moneyFuncEight.style.display = 'none';
-dropUpSeven.src = 'assets/dropup.png';
- dropUp.src = 'assets/duckduck_dropdown-removebg-preview.png';
-dropUpOne.src = 'assets/duckduck_dropdown-removebg-preview.png';
-dropUpTwo.src = 'assets/duckduck_dropdown-removebg-preview.png';
-dropUpThree.src = 'assets/duckduck_dropdown-removebg-preview.png';
-dropUpFour.src = 'assets/duckduck_dropdown-removebg-preview.png';
-dropUpFive.src = 'assets/duckduck_dropdown-removebg-preview.png';
-dropUpSix.src = 'assets/duckduck_dropdown-removebg-preview.png';
-dropUpEight.src = 'assets/duckduck_dropdown-removebg-preview.png';
-}
-function makeMoneyEight(){
-  moneyFuncEight.style.display = 'block';
-moneyFuncSeven.style.display = 'none';
-moneyFunc.style.display = 'none';
-moneyFuncOne.style.display = 'none';
- moneyFuncTwo.style.display = 'none';
- moneyFuncThree.style.display = 'none';
- moneyFuncFour.style.display = 'none';
- moneyFuncFive.style.display = 'none';
- moneyFuncSix.style.display = 'none';
- moneyFuncSeven.style.display = 'none';
-dropUpEight.src = 'assets/dropup.png';
-dropUpSeven.src = 'assets/duckduck_dropdown-removebg-preview.png';
- dropUp.src = 'assets/duckduck_dropdown-removebg-preview.png';
-dropUpOne.src = 'assets/duckduck_dropdown-removebg-preview.png';
-dropUpTwo.src = 'assets/duckduck_dropdown-removebg-preview.png';
-dropUpThree.src = 'assets/duckduck_dropdown-removebg-preview.png';
-dropUpFour.src = 'assets/duckduck_dropdown-removebg-preview.png';
-dropUpFive.src = 'assets/duckduck_dropdown-removebg-preview.png';
-dropUpSix.src = 'assets/duckduck_dropdown-removebg-preview.png';
-}
-</script>
+     
   </body>
 </html>
 
