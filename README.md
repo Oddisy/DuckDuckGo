@@ -1,2 +1,2 @@
 # DuckDuckGo
-I cloned Duckduckgo site using html and css, 
+I cloned Duckduckgo site using html, css, javascript 
